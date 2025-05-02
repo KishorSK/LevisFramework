@@ -26,7 +26,7 @@
     <artifactId>testng</artifactId>
     <version>7.11.0</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/cm.aventstak -->
+<!-- https://mvnrepository.com/artifact/cm.aventsta -->
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
