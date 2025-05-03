@@ -22,7 +22,7 @@ import com.beust.jcommander.Parameter;
 
 public class baseClass {
 	
-	public WebDriver driver;
+	public  WebDriver driver;
 	public Properties prop;
 	public Properties datafile;
 	

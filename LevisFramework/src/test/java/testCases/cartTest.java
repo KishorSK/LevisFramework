@@ -22,12 +22,7 @@ public class cartTest extends baseClass
 {
 	homePage HomePage;
 	cartPage CartPage;
-	// @BeforeMethod
-	    //public void setup() {
-		   // driver = LaunchSite();
-	        //HomePage = new homePage(driver);
-	        //CartPage = new cartPage(driver);
-				//}
+	
 	@Test
 	public void verifyCartOpen()
 	{
