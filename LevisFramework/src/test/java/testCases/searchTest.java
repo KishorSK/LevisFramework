@@ -19,24 +19,12 @@ public class searchTest extends baseClass{
 	
 	homePage HomePage;
 	searchPage SearchPage;
-	public WebDriver driver;
-	@BeforeMethod
-	public void setup()
-	{
-		driver = LaunchSite();
-		HomePage = new homePage(driver);
-		SearchPage = new searchPage(driver);
-	}
-	
-	@AfterMethod
-	public void tearDown()
-	{
-		driver.quit();
-	}
 	
 	@Test (priority = 1)
 	public void searchByValidInput()
 	{
+		HomePage = new homePage(driver);
+		SearchPage = new searchPage(driver);
 		HomePage.validSearch(datafile.getProperty("searchValid"));
 		String validmsg = SearchPage.validVerification();
 		System.out.println(validmsg);
@@ -46,6 +34,8 @@ public class searchTest extends baseClass{
 	@Test(priority = 2)
 	public void searchByInvalidInput()
 	{
+		HomePage = new homePage(driver);
+		SearchPage = new searchPage(driver);
 		HomePage.invalidSearch(datafile.getProperty("searchinvalid"));
 		String invalidmsg = SearchPage.invalidVerification();
 		System.out.println(invalidmsg);
