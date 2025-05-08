@@ -3,7 +3,7 @@
 <listeners>
 <listener class-name="listeners.MyListener"/>
 </listeners>
-  <test thread-count="5" name="Test">
+  <test name="Test">
     <classes>
       <class name="testCases.cartTest"/>
       <class name="testCases.searchTest"/>

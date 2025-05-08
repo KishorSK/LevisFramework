@@ -22,7 +22,6 @@ public class cartTest extends baseClass
 {
 	homePage HomePage;
 	cartPage CartPage;
-	
 	@Test
 	public void verifyCartOpen()
 	{

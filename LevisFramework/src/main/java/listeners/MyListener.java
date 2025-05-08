@@ -41,8 +41,24 @@ public class MyListener implements ITestListener
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		//String testName = result.getName();
 		
+		String testName = result.getName();
+	    System.out.println("Taking screenshot on failure...");
+
+	    WebDriver driver = (WebDriver) result.getAttribute("WebDriver");  // ✅ Access it directly
+
+	    if (driver != null) {
+	        String ssPath = screenShot.captureScreenshot(driver, testName);
+	        extentTest.addScreenCaptureFromPath(ssPath);
+	    } else {
+	        System.out.println("Driver is null, screenshot not captured.");
+	    }
+
+	    extentTest.log(Status.INFO, result.getThrowable());
+	    extentTest.log(Status.FAIL, testName + " got failed");
+	    
+		/*String testName = result.getName();
+		System.out.println("ss taken");
 		WebDriver driver = null;
 		try {
 			driver = (WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance()); // to get driver from the respective testcase
@@ -53,7 +69,7 @@ public class MyListener implements ITestListener
 		String ssPath = screenShot.captureScreenshot(driver, testName);
 		extentTest.addScreenCaptureFromPath(ssPath);
 		extentTest.log(Status.INFO, result.getThrowable());
-		extentTest.log(Status.FAIL, testName + "Got failed");
+		extentTest.log(Status.FAIL, testName + "Got failed");*/
 	}
 
 	@Override

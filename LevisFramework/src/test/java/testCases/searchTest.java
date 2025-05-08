@@ -20,6 +20,7 @@ public class searchTest extends baseClass{
 	homePage HomePage;
 	searchPage SearchPage;
 	
+	
 	@Test (priority = 1)
 	public void searchByValidInput()
 	{

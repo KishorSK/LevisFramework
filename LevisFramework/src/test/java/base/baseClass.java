@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -51,7 +52,7 @@ public class baseClass {
 		
 	}
 	@BeforeMethod
-	public WebDriver LaunchSite()
+	public void LaunchSite(ITestResult result)
 	{
 		loadPropertiesFile();
 		String browserName = prop.getProperty("browser").toLowerCase();
@@ -70,7 +71,8 @@ public class baseClass {
 		{
 			driver = new EdgeDriver();
 		}
-		return driver;
+		 result.setAttribute("WebDriver", driver);
+		//return driver;
 	}
 	@AfterMethod
 	public void tearDown() {
