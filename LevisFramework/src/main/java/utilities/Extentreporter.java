@@ -18,7 +18,7 @@ public class Extentreporter
 		sparkReporter.config().setTheme(Theme.DARK);
 		sparkReporter.config().setReportName("Levis Test Report");
 		sparkReporter.config().setDocumentTitle("E2E report");
-		sparkReporter.config().setTimeStampFormat("dd/MM/yyyy hh:mm:ss");
+		sparkReporter.config().setTimeStampFormat("dd/MM/yyyy hh:mm:ss");	
 		extentReport.attachReporter(sparkReporter);
 		Properties configProp = new Properties();
 		File configPropFile = new File(System.getProperty("user.dir")+"\\src\\main\\java\\config\\config.properties");

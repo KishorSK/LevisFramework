@@ -7,6 +7,7 @@
     <classes>
       <class name="testCases.cartTest"/>
       <class name="testCases.searchTest"/>
+      <class name="testCases.homepageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

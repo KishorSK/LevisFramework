@@ -38,11 +38,11 @@ public class MyListener implements ITestListener
 		//String testName = result.getName();
 		extentTest.log(Status.PASS, testName+"Got passed");
 	}
-
+ 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		
-		String testName = result.getName();
+		/*String testName = result.getName();
 	    System.out.println("Taking screenshot on failure...");
 
 	    WebDriver driver = (WebDriver) result.getAttribute("WebDriver");  // ✅ Access it directly
@@ -55,9 +55,9 @@ public class MyListener implements ITestListener
 	    }
 
 	    extentTest.log(Status.INFO, result.getThrowable());
-	    extentTest.log(Status.FAIL, testName + " got failed");
+	    extentTest.log(Status.FAIL, testName + " got failed");*/
 	    
-		/*String testName = result.getName();
+		String testName = result.getName();
 		System.out.println("ss taken");
 		WebDriver driver = null;
 		try {
@@ -69,7 +69,7 @@ public class MyListener implements ITestListener
 		String ssPath = screenShot.captureScreenshot(driver, testName);
 		extentTest.addScreenCaptureFromPath(ssPath);
 		extentTest.log(Status.INFO, result.getThrowable());
-		extentTest.log(Status.FAIL, testName + "Got failed");*/
+		extentTest.log(Status.FAIL, testName + "Got failed");
 	}
 
 	@Override

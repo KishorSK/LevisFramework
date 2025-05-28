@@ -25,6 +25,7 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.11.0</version>
+    <scope>compile</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/cm.aventsta -->
 <dependency>
